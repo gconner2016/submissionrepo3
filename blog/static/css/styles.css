@@ -1,0 +1,14 @@
+.material-margin-horizontal {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.material-padding-horizontal {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.material-padding-vertical {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
