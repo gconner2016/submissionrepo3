@@ -10,10 +10,4 @@ class Post_Form(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('Title', 'Post_Date', 'Post_Summary', 'Post_Content')
-        
-
-
-
-
-
 

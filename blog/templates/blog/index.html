@@ -3,36 +3,20 @@
 
 {% block content %}
     <div class="container material-padding-vertical">
+        {% for post in posts %}
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card-body">
                     <h5 class="card-title">
-                        Blog Title
+                        {{post.Title}}
                     </h5>
                     <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        {{post.Post_Summary}}
                     </p>
-                    <a href="#">Read More</a>
+                    <a href="{% url 'blog:post' pk=post.pk %}">Read More</a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card-body">
-                    <h5 class="card-title">Blog Title</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card-body">
-                    <h5 class="card-title">Blog Title</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-        </div>
+       {% endfor %}
     </div>
 {% endblock %}
